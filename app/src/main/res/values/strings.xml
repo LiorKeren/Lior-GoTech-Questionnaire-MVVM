@@ -2,4 +2,7 @@
     <string name="app_name">Questionnaire</string>
     <string name="edit_text_hint">Your answer</string>
     <string name="submitbtn">SUBMIT</string>
+    <string name="show_me_what_you_got">Show me what you got!</string>
+    <string name="required">* Required</string>
+    <string name="gotech_questionnaire">GoTech Questionnaire</string>
 </resources>
