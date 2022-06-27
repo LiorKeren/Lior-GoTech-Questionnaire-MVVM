@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Questionnaire</string>
+    <string name="edit_text_hint">Your answer</string>
+    <string name="submitbtn">SUBMIT</string>
+</resources>

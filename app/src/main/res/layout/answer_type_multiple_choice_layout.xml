@@ -1,0 +1,35 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RadioGroup
+        android:id="@+id/lactate_radio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <RadioButton
+            android:id="@+id/lactate_default_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="lactate_default_value"/>
+
+        <RadioButton
+            android:id="@+id/lactate_calibrated_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="lactate_calibrated_value" />
+        <RadioButton
+            android:id="@+id/lactate_custom_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="lactate_custom_value"/>
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/lactate_custom_value_edit_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/lactate_radio"
+        android:layout_toRightOf="@+id/lactate_radio"
+        android:text="Test Text" />
+</RelativeLayout>

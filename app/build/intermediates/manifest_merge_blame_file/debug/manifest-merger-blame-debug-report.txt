@@ -1,0 +1,69 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.mindorks.framework.mvvm"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="16"
+8-->/Users/liorkeren/AndroidStudioProjects/LiorGoTech/app/src/main/AndroidManifest.xml
+9        android:targetSdkVersion="29" />
+9-->/Users/liorkeren/AndroidStudioProjects/LiorGoTech/app/src/main/AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+11-->/Users/liorkeren/AndroidStudioProjects/LiorGoTech/app/src/main/AndroidManifest.xml:5:5-79
+11-->/Users/liorkeren/AndroidStudioProjects/LiorGoTech/app/src/main/AndroidManifest.xml:5:22-76
+12    <uses-permission android:name="android.permission.INTERNET" />
+12-->/Users/liorkeren/AndroidStudioProjects/LiorGoTech/app/src/main/AndroidManifest.xml:6:5-67
+12-->/Users/liorkeren/AndroidStudioProjects/LiorGoTech/app/src/main/AndroidManifest.xml:6:22-64
+13
+14    <application
+14-->/Users/liorkeren/AndroidStudioProjects/LiorGoTech/app/src/main/AndroidManifest.xml:8:5-25:19
+15        android:name="com.lior.questionnaire.mvvm.App"
+15-->/Users/liorkeren/AndroidStudioProjects/LiorGoTech/app/src/main/AndroidManifest.xml:11:9-55
+16        android:allowBackup="true"
+16-->/Users/liorkeren/AndroidStudioProjects/LiorGoTech/app/src/main/AndroidManifest.xml:9:9-35
+17        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+17-->[androidx.core:core:1.3.0] /Users/liorkeren/.gradle/caches/transforms-2/files-2.1/8106c9afeb27cc0c50f85995740f877c/core-1.3.0/AndroidManifest.xml:24:18-86
+18        android:debuggable="true"
+19        android:icon="@mipmap/ic_launcher"
+19-->/Users/liorkeren/AndroidStudioProjects/LiorGoTech/app/src/main/AndroidManifest.xml:10:9-43
+20        android:label="@string/app_name"
+20-->/Users/liorkeren/AndroidStudioProjects/LiorGoTech/app/src/main/AndroidManifest.xml:12:9-41
+21        android:roundIcon="@mipmap/ic_launcher_round"
+21-->/Users/liorkeren/AndroidStudioProjects/LiorGoTech/app/src/main/AndroidManifest.xml:13:9-54
+22        android:supportsRtl="true"
+22-->/Users/liorkeren/AndroidStudioProjects/LiorGoTech/app/src/main/AndroidManifest.xml:14:9-35
+23        android:testOnly="true"
+24        android:theme="@style/AppTheme"
+24-->/Users/liorkeren/AndroidStudioProjects/LiorGoTech/app/src/main/AndroidManifest.xml:15:9-40
+25        android:usesCleartextTraffic="true" >
+25-->/Users/liorkeren/AndroidStudioProjects/LiorGoTech/app/src/main/AndroidManifest.xml:16:9-44
+26        <activity android:name="com.lior.questionnaire.mvvm.ui.main.view.MainActivity" >
+26-->/Users/liorkeren/AndroidStudioProjects/LiorGoTech/app/src/main/AndroidManifest.xml:18:9-24:20
+26-->/Users/liorkeren/AndroidStudioProjects/LiorGoTech/app/src/main/AndroidManifest.xml:18:19-87
+27            <intent-filter>
+27-->/Users/liorkeren/AndroidStudioProjects/LiorGoTech/app/src/main/AndroidManifest.xml:19:13-23:29
+28                <action android:name="android.intent.action.MAIN" />
+28-->/Users/liorkeren/AndroidStudioProjects/LiorGoTech/app/src/main/AndroidManifest.xml:20:17-69
+28-->/Users/liorkeren/AndroidStudioProjects/LiorGoTech/app/src/main/AndroidManifest.xml:20:25-66
+29
+30                <category android:name="android.intent.category.LAUNCHER" />
+30-->/Users/liorkeren/AndroidStudioProjects/LiorGoTech/app/src/main/AndroidManifest.xml:22:17-77
+30-->/Users/liorkeren/AndroidStudioProjects/LiorGoTech/app/src/main/AndroidManifest.xml:22:27-74
+31            </intent-filter>
+32        </activity>
+33
+34        <provider
+34-->[androidx.lifecycle:lifecycle-process:2.0.0] /Users/liorkeren/.gradle/caches/transforms-2/files-2.1/5c7cdf17db77e6fa1e235092fe85ccd9/jetified-lifecycle-process-2.0.0/AndroidManifest.xml:23:9-27:43
+35            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
+35-->[androidx.lifecycle:lifecycle-process:2.0.0] /Users/liorkeren/.gradle/caches/transforms-2/files-2.1/5c7cdf17db77e6fa1e235092fe85ccd9/jetified-lifecycle-process-2.0.0/AndroidManifest.xml:24:13-79
+36            android:authorities="com.mindorks.framework.mvvm.lifecycle-process"
+36-->[androidx.lifecycle:lifecycle-process:2.0.0] /Users/liorkeren/.gradle/caches/transforms-2/files-2.1/5c7cdf17db77e6fa1e235092fe85ccd9/jetified-lifecycle-process-2.0.0/AndroidManifest.xml:25:13-69
+37            android:exported="false"
+37-->[androidx.lifecycle:lifecycle-process:2.0.0] /Users/liorkeren/.gradle/caches/transforms-2/files-2.1/5c7cdf17db77e6fa1e235092fe85ccd9/jetified-lifecycle-process-2.0.0/AndroidManifest.xml:26:13-37
+38            android:multiprocess="true" />
+38-->[androidx.lifecycle:lifecycle-process:2.0.0] /Users/liorkeren/.gradle/caches/transforms-2/files-2.1/5c7cdf17db77e6fa1e235092fe85ccd9/jetified-lifecycle-process-2.0.0/AndroidManifest.xml:27:13-40
+39    </application>
+40
+41</manifest>

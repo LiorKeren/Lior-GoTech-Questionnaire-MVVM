@@ -1,0 +1,35 @@
+{
+  "questions": [
+    {
+      "text": "What language is your favorite ?",
+      "isRequired": true,
+      "answers": [
+        "Kotlin",
+        "Java",
+        "C++"
+      ]
+    },
+    {
+      "text": "What do you like about programing ?",
+      "isRequired": false,
+      "answers": []
+    },
+    {
+      "text": "How was the assignment ?",
+      "isRequired": true,
+      "answers": [
+        "Easy",
+        "Normal",
+        "Hard",
+        "Other:"
+      ]
+    }
+  ],
+  "questions2": [
+    "What language is your favorite ?",
+    "what do you like about programing ?",
+    "How was the assignment ?"
+  ],
+  "answers": [
+  ]
+}
