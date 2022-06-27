@@ -27,22 +27,6 @@ class QuestionViewHolder (itemView: View) : RecyclerView.ViewHolder(itemView), K
     private lateinit var questionText: String
     private val radioEditText = EditText(itemView.context)
 
-    init {
-//        itemView.radioGroup.setOnCheckedChangeListener {group, checkedId ->
-//            val radio:RadioButton = group.findViewById(checkedId)
-//            var text = radio.text.toString()
-//            if (text.contains("Other")){
-//                text = "$text ${radioEditText.text}"
-//            }
-//            postAnswer(text)
-//
-//        }
-//        itemView.answerTypeTextEditText.doAfterTextChanged {
-//            Log.i("aaaa", "itemView.answerTypeTextEditText.doAfterTextChanged $it.toString()")
-//
-//            postAnswer(it.toString())
-//        }
-    }
 
     private fun postAnswer(answerText: String){
         if (answerText.isNotEmpty())rxDataPass.getListItemClickSubject().onNext(Answer(answerText = answerText, question = questionText))
@@ -69,7 +53,6 @@ class QuestionViewHolder (itemView: View) : RecyclerView.ViewHolder(itemView), K
             QuestionType.Text -> {
                 itemView.answerTypeTextEditText.visibility = View.VISIBLE
                 itemView.answerTypeTextEditText.doAfterTextChanged {
-                    Log.i("aaaa", "itemView.answerTypeTextEditText.doAfterTextChanged $it.toString()")
                     if(it!!.isNotEmpty()) postAnswer(it.toString())
                 }
 
@@ -99,8 +82,6 @@ class QuestionViewHolder (itemView: View) : RecyclerView.ViewHolder(itemView), K
                 if (text.contains("Other")) {
                     text = "$text ${radioEditText.text}"
                 }
-                Log.i("aaaa", "itemView.radioGroup.setOnCheckedChangeListener $text  $checkedId")
-
                 postAnswer(text)
             }
 
@@ -123,7 +104,6 @@ class QuestionViewHolder (itemView: View) : RecyclerView.ViewHolder(itemView), K
                     parentView.removeView(radioEditText)
                 }
 
-//                val editText = EditText(radioGroup.context)
                 radioEditText.id = R.id.choiceEditText
                 val layoutParams = RelativeLayout.LayoutParams(
                     ViewGroup.LayoutParams.MATCH_PARENT,
@@ -136,9 +116,6 @@ class QuestionViewHolder (itemView: View) : RecyclerView.ViewHolder(itemView), K
                 radioEditText.doAfterTextChanged {
                     val radioButtonID = itemView.radioGroup.checkedRadioButtonId
                     if (radioButtonID != -1) {
-                        Log.i("aaaa", "radioEditText.doAfterTextChanged $it.toString() $radioButtonID")
-
-
                         val radioButton: RadioButton = radioGroup.findViewById(radioButtonID)
                         if (radioButton.isChecked &&
                             radioButton.text.toString().contains("Other")

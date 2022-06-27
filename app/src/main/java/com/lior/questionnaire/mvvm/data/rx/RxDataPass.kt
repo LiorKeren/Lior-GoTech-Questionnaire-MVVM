@@ -7,7 +7,7 @@ class RxDataPass {
 
     private val behaviorSubject: BehaviorSubject<Answer> = BehaviorSubject.create()
 
-    //Subscribe a position when item click
+    //Subscribe an Answer when item click
     fun getListItemClickSubject(): BehaviorSubject<Answer> {
         return behaviorSubject
     }

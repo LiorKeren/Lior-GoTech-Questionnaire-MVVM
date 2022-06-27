@@ -1,9 +1,6 @@
 package com.lior.questionnaire.mvvm.ui.main.adapter
 
-import android.os.Build
-import android.text.Spannable
-import android.text.SpannableString
-import android.text.style.ForegroundColorSpan
+
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -32,7 +29,6 @@ class MainAdapter(
         }
 
          */
-//        (holder as QuestionViewHolder).itemView.
         (holder as QuestionViewHolder).bind(questions[position])
     }
 
