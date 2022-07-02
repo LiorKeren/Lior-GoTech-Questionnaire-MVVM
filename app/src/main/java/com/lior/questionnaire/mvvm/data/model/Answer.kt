@@ -3,10 +3,10 @@ package com.lior.questionnaire.mvvm.data.model
 import com.squareup.moshi.Json
 
 data class Answer(
-    @Json(name = "text")
-    val answerText: String,
     @Json(name = "question")
-    val question: String
+    val question: String,
+    @Json(name = "text")
+    val answerText: String = " "
 ){
 
     override fun equals(other: Any?)

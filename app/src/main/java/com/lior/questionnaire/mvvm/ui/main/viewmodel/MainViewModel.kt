@@ -17,7 +17,6 @@ class MainViewModel(
 ) : ViewModel() {
 
     private val answers: MutableList<Answer> = mutableListOf()
-    private var questionList: List<Question>? = listOf()
 
     private var _compositeDisposable = CompositeDisposable()
     private val compositeDisposable: CompositeDisposable
@@ -42,10 +41,10 @@ class MainViewModel(
 
     fun postAnswers(){
         viewModelScope.launch {
-        val isRequiredList: List<Question> = questionList!!.filter { question -> question.isRequired  }
+        val isRequiredList: List<Question> = _questions.value?.data!!.filter { question -> question.isRequired  }
         var isAllRequiredFilled = false
             for(q in isRequiredList){
-                if (!answers.contains(Answer(answerText = "", question = q.text))){
+                if (!answers.contains(Answer(question = q.text))){
                     isAllRequiredFilled = false
                     break
                 }
@@ -66,7 +65,6 @@ class MainViewModel(
             if (networkHelper.isNetworkConnected()) {
                 mainRepository.getQuestions().let {
                     if (it.isSuccessful) {
-                        questionList = it.body()
                         _questions.postValue(Resource.success(it.body()))
                     } else _questions.postValue(Resource.error(it.errorBody().toString(), null))
 
