@@ -23,6 +23,9 @@ class MainViewModel(
     get() = _compositeDisposable
 
     private val _questions = MutableLiveData<Resource<List<Question>>>()
+    private val _isAllAnswersFilled = MutableLiveData<Boolean>()
+    val isAllAnswersFilled: LiveData<Boolean>
+        get() = _isAllAnswersFilled
     val questions: LiveData<Resource<List<Question>>>
         get() = _questions
 
@@ -54,8 +57,10 @@ class MainViewModel(
                 mainRepository.postAnswers(answers.toList())
                 answers.clear()
                 fetchQuestions()
+                _isAllAnswersFilled.value = true
+            }else{
+                _isAllAnswersFilled.value = false
             }
-
         }
     }
 

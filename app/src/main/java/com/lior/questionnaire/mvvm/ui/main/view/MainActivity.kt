@@ -5,7 +5,6 @@ import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
-import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.lior.questionnaire.mvvm.R
 import com.lior.questionnaire.mvvm.data.model.Question
@@ -53,6 +52,15 @@ class MainActivity : AppCompatActivity() {
                     Toast.makeText(this, it.message, Toast.LENGTH_LONG).show()
                 }
             }
+        })
+
+        mainViewModel.isAllAnswersFilled.observe(this, Observer {
+            val toastMessageStr  = if (it){
+                "Thank you for your time !"
+            }else{
+                "Please fill all required questions !"
+            }
+            Toast.makeText(this, toastMessageStr, Toast.LENGTH_LONG).show()
         })
 
     }
