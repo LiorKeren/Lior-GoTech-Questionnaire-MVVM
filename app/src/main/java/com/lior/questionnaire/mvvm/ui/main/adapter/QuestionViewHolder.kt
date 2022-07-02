@@ -5,7 +5,6 @@ import android.text.Editable
 import android.text.Spannable
 import android.text.SpannableString
 import android.text.style.ForegroundColorSpan
-import android.util.Log
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
@@ -37,7 +36,6 @@ class QuestionViewHolder (itemView: View) : RecyclerView.ViewHolder(itemView), K
         //For re loading the list because we are using recyclerView the prev data is still there
         itemView.radioGroup.removeAllViews()
         itemView.radioGroup.clearCheck( )
-
 
         itemView.answerTypeTextEditText.visibility = View.GONE
         itemView.radioGroup.visibility = View.GONE
